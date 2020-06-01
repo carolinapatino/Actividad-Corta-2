@@ -1,13 +1,14 @@
 import { CaptureConfiguration } from "./CaptureConfiguration";
+import { Capture } from "./Capture";
 
 export class SaturationConfig extends CaptureConfiguration {
-  light_quantity: number;
+  myCapture : Capture;
 
   public getLightQuantity() {
-    return this.light_quantity;
+    return this.myCapture.getLightQuantity();
   }
 
   public setLightQuantity(light_quantity: number) {
-    this.light_quantity = light_quantity;
+    this.myCapture.light_quantity = light_quantity;
   }
 }

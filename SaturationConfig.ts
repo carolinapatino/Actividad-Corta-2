@@ -1,13 +1,15 @@
 import { CaptureConfiguration } from "./CaptureConfiguration";
+import { Capture } from "./Capture";
 
 export class SaturationConfig extends CaptureConfiguration {
-  intensity: number;
+
+  myCapture : Capture;
 
   public getIntensity() {
-    return this.intensity;
+    return this.myCapture.getIntensity();
   }
 
   public setIntensity(intensity: number) {
-    this.intensity = intensity;
+    this.myCapture.intensity = intensity;
   }
 }

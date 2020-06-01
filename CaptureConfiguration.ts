@@ -1,7 +1,7 @@
 import { Capture } from "./Capture";
 
 export class CaptureConfiguration extends Capture {
-  CaptureTaken: Capture;
+  myCapture : Capture;
 
   public getIntensity() {
     return this.intensity;

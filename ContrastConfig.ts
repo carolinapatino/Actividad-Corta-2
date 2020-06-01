@@ -1,13 +1,14 @@
 import { CaptureConfiguration } from "./CaptureConfiguration";
+import { Capture } from "./Capture";
 
 export class ContrastConfig extends CaptureConfiguration {
-  tonality: number;
+  myCapture: Capture;
 
   public getTonality() {
-    return this.tonality;
+    return this.myCapture.getTonality();
   }
 
   public setTonality(tonality: number) {
-    this.tonality = tonality;
+    this.myCapture.tonality = tonality;
   }
 }
