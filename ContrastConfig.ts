@@ -4,6 +4,11 @@ import { Capture } from "./Capture";
 export class ContrastConfig extends CaptureConfiguration {
   myCapture: Capture;
 
+  constructor (myCapture : Capture){
+    super();
+    this.myCapture = myCapture;
+  }
+
   public getTonality() {
     return this.myCapture.getTonality();
   }

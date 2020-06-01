@@ -5,6 +5,11 @@ export class SaturationConfig extends CaptureConfiguration {
 
   myCapture : Capture;
 
+  constructor (myCapture : Capture){
+    super();
+    this.myCapture = myCapture;
+  }
+
   public getIntensity() {
     return this.myCapture.getIntensity();
   }

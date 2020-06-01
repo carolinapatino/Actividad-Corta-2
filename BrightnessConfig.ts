@@ -4,6 +4,12 @@ import { Capture } from "./Capture";
 export class SaturationConfig extends CaptureConfiguration {
   myCapture : Capture;
 
+  
+  constructor (myCapture : Capture){
+    super();
+    this.myCapture = myCapture;
+  }
+
   public getLightQuantity() {
     return this.myCapture.getLightQuantity();
   }
