@@ -1,21 +1,22 @@
 import { CaptureConfiguration } from "./CaptureConfiguration";
 import {BasicCapture} from "./BasicCapture";
+import { Capture } from "./Capture";
 
 export class Camera {
   public branch: string;
+  public myCapture: Capture;
 
   public Camera(branch: string) {
     this.branch = branch;
   }
 
   public TakeCapture(CaptureType: number ) {
-    let myCapture;
     if (CaptureType == 1){
-      myCapture = new BasicCapture();
+      this.myCapture = new BasicCapture();
     }
     else if (CaptureType == 2 ){
-      myCapture = new CaptureConfiguration();
+      this.myCapture = new CaptureConfiguration();
     }
-    return myCapture;
+    return this.myCapture;
   }
 }
